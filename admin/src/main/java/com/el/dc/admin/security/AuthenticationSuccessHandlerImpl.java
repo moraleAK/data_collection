@@ -21,7 +21,6 @@ import java.io.IOException;
 public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHandler {
     private static Logger LOG = LoggerFactory.getLogger(AuthenticationSuccessHandlerImpl.class);
 
-    @Value("${payment.test.index.url}")
     private String indexUrl = "index.jsp";
 
     @Override

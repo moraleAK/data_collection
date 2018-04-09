@@ -23,7 +23,6 @@ import java.io.IOException;
 public class AuthenticationFailureHandlerImpl implements AuthenticationFailureHandler {
     private static Logger LOG = LoggerFactory.getLogger(AuthenticationFailureHandlerImpl.class);
 
-    @Value("${payment.test.login.url}")
     private String loginUrl = "/pages/index";
 
 //    @Autowired

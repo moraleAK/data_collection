@@ -11,14 +11,34 @@ import java.util.Collection;
  * Time: 8:30 PM
  */
 public class UserDetailsImpl implements UserDetails {
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return false;
+    }
 
     private long id;
 
-    private String accountCode;
-
     private int status;
-
-    private String companyName;
 
     private String lastLoginTime;
 
@@ -26,36 +46,12 @@ public class UserDetailsImpl implements UserDetails {
 
     private String username;
 
-    private boolean accountNonExpired;
-
-    private boolean CredentialsNonExpired;
-
-    private boolean Enabled;
-
-    private boolean AccountNonLocked;
-
-    private boolean isMarket;
-
-    private long marketId;
-
-    private long pwdUpdateTime;
-
-    private String safetyMessage;
-
-    public String getAccountCode() {
-        return accountCode;
+    public long getId() {
+        return id;
     }
 
-    public void setAccountCode(String accountCode) {
-        this.accountCode = accountCode;
-    }
-
-    public String getLastLoginTime() {
-        return lastLoginTime;
-    }
-
-    public void setLastLoginTime(String lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public int getStatus() {
@@ -66,41 +62,12 @@ public class UserDetailsImpl implements UserDetails {
         this.status = status;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getLastLoginTime() {
+        return lastLoginTime;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
-    }
-
-    public boolean isMarket() {
-        return isMarket;
-    }
-
-    public void setMarket(boolean market) {
-        isMarket = market;
-    }
-
-    public long getMarketId() {
-        return marketId;
-    }
-
-    public void setMarketId(long marketId) {
-        this.marketId = marketId;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+    public void setLastLoginTime(String lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
     }
 
     @Override
@@ -108,69 +75,17 @@ public class UserDetailsImpl implements UserDetails {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String getUsername() {
         return username;
     }
 
-    public void setAccountNonLocked(boolean accountNonLocked) {
-        AccountNonLocked = accountNonLocked;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return accountNonExpired;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return AccountNonLocked;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return CredentialsNonExpired;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return Enabled;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public void setAccountNonExpired(boolean accountNonExpired) {
-        this.accountNonExpired = accountNonExpired;
-    }
-
-    public void setCredentialsNonExpired(boolean credentialsNonExpired) {
-        CredentialsNonExpired = credentialsNonExpired;
-    }
-
-    public void setEnabled(boolean enabled) {
-        Enabled = enabled;
-    }
-
-    public long getPwdUpdateTime() {
-        return pwdUpdateTime;
-    }
-
-    public void setPwdUpdateTime(long pwdUpdateTime) {
-        this.pwdUpdateTime = pwdUpdateTime;
-    }
-
-    public String getSafetyMessage() {
-        return safetyMessage;
-    }
-
-    public void setSafetyMessage(String safetyMessage) {
-        this.safetyMessage = safetyMessage;
     }
 
     @Override
