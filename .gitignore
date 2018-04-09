@@ -1,0 +1,12 @@
+payment-*/target/
+payment-*/*.iml
+payment-*/logs/
+*.iml
+/logs/
+/.idea/
+payment-admin-web/src/main/webapp/uploaded/*
+payment-admin-web/src/main/webapp/CSV/*
+payment-web/src/main/webapp/upload/*
+*.csv
+*rebel*
+payment-web/src/main/webapp/pdf/*
