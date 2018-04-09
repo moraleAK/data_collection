@@ -1,14 +1,12 @@
 package com.el.dc.admin.security;
-import com.el.wc.payment.test.service.RedisService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.StringUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -28,8 +26,8 @@ public class AuthenticationFailureHandlerImpl implements AuthenticationFailureHa
     @Value("${payment.test.login.url}")
     private String loginUrl = "/pages/index";
 
-    @Autowired
-    private RedisService redisService;
+//    @Autowired
+//    private RedisService redisService;
 
     @Override
     public void onAuthenticationFailure(HttpServletRequest request,
@@ -55,17 +53,17 @@ public class AuthenticationFailureHandlerImpl implements AuthenticationFailureHa
                 //request.getSession().setAttribute("useName", request.getParameter("username"));
                 //request.getSession().setAttribute("passWord", request.getParameter("password"));
                 String useName = request.getParameter("username");
-                String count = (String) redisService.get(useName + "login");
-                int c = 0;
-                if (!StringUtils.isEmpty(count)) {
-                    c = Integer.parseInt(count);
-                }
-                if (c < 5) {
-                    redisService.addOrUpdateLoginLog(useName + "login", String.valueOf(c + 1));
-                } else {
-                    request.getSession().setAttribute("errorMessage", "连续五次密码输入错误，账户已临时冻结！请于24小时之后再试！");
-                }
-                LOG.info("失败次数{}", c + 1);
+//                String count = (String) redisService.get(useName + "login");
+//                int c = 0;
+//                if (!StringUtils.isEmpty(count)) {
+//                    c = Integer.parseInt(count);
+//                }
+//                if (c < 5) {
+////                    redisService.addOrUpdateLoginLog(useName + "login", String.valueOf(c + 1));
+//                } else {
+//                    request.getSession().setAttribute("errorMessage", "连续五次密码输入错误，账户已临时冻结！请于24小时之后再试！");
+//                }
+//                LOG.info("失败次数{}", c + 1);
 
                 response.sendRedirect(loginUrl);
             }

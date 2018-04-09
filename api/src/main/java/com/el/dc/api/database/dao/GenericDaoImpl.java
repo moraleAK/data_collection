@@ -1,18 +1,13 @@
 package com.el.dc.api.database.dao;
 
-import com.el.wc.payment.commons.ErrorCode;
-import com.el.wc.payment.commons.exception.DaoException;
+import com.el.dc.api.ErrorCode;
+import com.el.dc.api.database.exception.DaoException;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-/**
- * User: Rolandz
- * Date: 5/27/16
- * Time: 3:40 PM
- */
 public abstract class GenericDaoImpl<T, KeyType> implements GenericDao<T, KeyType> {
     @PersistenceContext
     private EntityManager em;
