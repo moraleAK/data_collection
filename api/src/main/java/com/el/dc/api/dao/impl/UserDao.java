@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 public class UserDao extends GenericDaoImpl<User, Long> {
     @Override
     protected Class<User> getDomainClass() {
-        return null;
+        return User.class;
     }
 }
