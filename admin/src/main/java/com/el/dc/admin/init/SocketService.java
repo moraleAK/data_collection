@@ -1,5 +1,7 @@
 package com.el.dc.admin.init;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.el.dc.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
