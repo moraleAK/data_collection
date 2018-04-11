@@ -24,11 +24,11 @@ public class DataSourceInitListener implements ApplicationListener<ContextRefres
     public void onApplicationEvent(ContextStartedEvent contextStartedEvent) {
         System.out.println("############################################\n" +
                 "###############################################################");
-        try {
-            SocketService.run();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            SocketService.run();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
     public void onApplicationEvent(ContextClosedEvent contextClosedEvent) {
         System.out.println("############################################\n" +
