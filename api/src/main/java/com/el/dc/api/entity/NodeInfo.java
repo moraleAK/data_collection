@@ -3,6 +3,7 @@ package com.el.dc.api.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -12,7 +13,7 @@ import javax.persistence.Table;
 @Entity
 public class NodeInfo extends BaseEntity {
     // 设备Id
-    @Column(name = "device_id")
+    @Column(name = "device_id", nullable = false, unique = true)
     private String deviceId;
 
     // 类型

@@ -14,6 +14,7 @@
     <http pattern="/**/*.js" security="none" />
     <http pattern="/**/*.css" security="none" />
     <http pattern="/dc/data_receive" security="none" />
+    <http pattern="/dc/node_info_add" security="none" />
 
     <http auto-config="true" authentication-manager-ref="authenticationManager"
           access-decision-manager-ref="decisionManager" pattern="/**">

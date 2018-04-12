@@ -1,8 +1,6 @@
 package com.el.dc.api.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name = "t_node_sensor_data")
 @Entity
