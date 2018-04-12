@@ -13,8 +13,6 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 public class SocketService {
-    @Autowired
-    UserService userService;
 
     public void start() throws IOException {
         System.out.println("____________________________");
@@ -37,27 +35,8 @@ public class SocketService {
         ServerSocket server = new ServerSocket(port);
         boolean a = true;
         while (a) {
-            // server将一直等待连接的到来
-            System.out.println("server将一直等待连接的到来");
-            Socket socket = server.accept();
-            // 建立好连接后，从socket中获取输入流，并建立缓冲区进行读取
-            InputStream inputStream = socket.getInputStream();
-            byte[] bytes = new byte[1024];
-            int len;
-            StringBuilder sb = new StringBuilder();
-            try {
-                while ((len = inputStream.read(bytes)) != -1) {
-                    //注意指定编码格式，发送方和接收方一定要统一，建议使用UTF-8
-                    sb.append(new String(bytes, 0, len, "UTF-8"));
-                    userService.addUser(System.currentTimeMillis() + "", System.currentTimeMillis() + "");
-                    System.out.println("get message from client: " + sb);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            System.out.println("get message from client: " + sb);
-            inputStream.close();
-            socket.close();
+          Socket socket = server.accept();
+          SocketThread socketThread = new SocketThread(socket);
         }
 
         server.close();

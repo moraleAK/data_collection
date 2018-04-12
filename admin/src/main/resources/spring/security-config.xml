@@ -13,14 +13,7 @@
     <http pattern="/**/*.svg" security="none" />
     <http pattern="/**/*.js" security="none" />
     <http pattern="/**/*.css" security="none" />
-    <http pattern="/pages/login.jsp" security="none" />
-    <http pattern="/pages/register.jsp" security="none" />
-    <http pattern="/web/user_register" security="none" />
-    <http pattern="/web/get_register_verification_code" security="none" />
-    <http pattern="/web/check_register_login_name" security="none" />
-    <http pattern="/web/check_register_email" security="none" />
-    <http pattern="/verification_code_generation" security="none" />
-    <http pattern="/pages/account_warning.jsp" security="none" />
+    <http pattern="/dc/data_receive" security="none" />
 
     <http auto-config="true" authentication-manager-ref="authenticationManager"
           access-decision-manager-ref="decisionManager" pattern="/**">

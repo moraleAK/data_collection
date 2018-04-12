@@ -10,6 +10,7 @@
     <context:annotation-config />
     <context:component-scan base-package="com.el.dc.api.dao"/>
     <context:component-scan base-package="com.el.dc.api.service"/>
+    <context:component-scan base-package="com.el.dc.admin.init"/>
     <!--<context:component-scan base-package="com.el.dc.api.controller"/>-->
 
     <bean id="appProperties" class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">

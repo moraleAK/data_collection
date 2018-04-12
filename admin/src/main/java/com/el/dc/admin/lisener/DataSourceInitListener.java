@@ -1,6 +1,7 @@
 package com.el.dc.admin.lisener;
 
 import com.el.dc.admin.init.SocketService;
+import com.el.dc.api.common.HttpClientUtils;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -33,5 +34,9 @@ public class DataSourceInitListener implements ApplicationListener<ContextRefres
     public void onApplicationEvent(ContextClosedEvent contextClosedEvent) {
         System.out.println("############################################\n" +
                 "###############################################################");
+    }
+
+    public static void main(String[] args) {
+        HttpClientUtils.sendHttpRequest("http://localhost:9001/dc/data_receive" ,"hhhhh");
     }
 }
