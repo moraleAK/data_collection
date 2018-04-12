@@ -9,7 +9,7 @@ public class NodeInfoTest {
     @Test
     public void test(){
         NodeInfo nodeInfo = new NodeInfo();
-        nodeInfo.setDeviceId("20180403");
+        nodeInfo.setDeviceId("20180409");
         nodeInfo.setCompanyName("天府之国");
         nodeInfo.setHardwareVersion("1.3");
         nodeInfo.setManufacturer("富土康");
