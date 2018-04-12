@@ -1,6 +1,6 @@
 payment-*/target/
 payment-*/*.iml
-payment-*/logs/
+*/logs/
 *.iml
 /logs/
 /.idea/
