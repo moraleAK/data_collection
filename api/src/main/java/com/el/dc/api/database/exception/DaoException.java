@@ -1,10 +1,5 @@
 package com.el.dc.api.database.exception;
 
-/**
- * User: Rolandz
- * Date: 5/27/16
- * Time: 3:44 PM
- */
 public class DaoException extends AppException {
     public DaoException(String errCode, String errMessage) {
         super(errCode, errMessage);

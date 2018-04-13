@@ -5,11 +5,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-/**
- * User: Rolandz
- * Date: 22/11/2016
- * Time: 8:30 PM
- */
 public class UserDetailsImpl implements UserDetails {
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

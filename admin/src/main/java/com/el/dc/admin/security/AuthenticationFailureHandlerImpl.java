@@ -13,11 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * User: Rolandz
- * Date: 23/11/2016
- * Time: 1:58 PM
- */
+
 @Component
 @Transactional
 public class AuthenticationFailureHandlerImpl implements AuthenticationFailureHandler {

@@ -5,9 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.io.Serializable;
 
-/**
- * User: Rolandz
- */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ResponseTO implements Serializable {
     private int status;

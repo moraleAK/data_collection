@@ -1,10 +1,5 @@
 package com.el.dc.api.database;
 
-/**
- * User: Rolandz
- * Date: 5/24/16
- * Time: 3:55 PM
- */
 public class DataSourceSelector {
     public static final String READ = "READ";
     public static final String WRITE = "WRITE";

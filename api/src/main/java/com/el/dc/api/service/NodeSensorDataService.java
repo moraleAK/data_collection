@@ -55,5 +55,6 @@ public class NodeSensorDataService {
                 ;
         NodeSensorDataService dataService = new NodeSensorDataService();
         dataService.addNodeSensorData(data);
+        int start = data.indexOf("");
     }
 }

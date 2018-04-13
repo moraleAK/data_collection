@@ -7,11 +7,6 @@ import org.springframework.stereotype.Component;
 
 import javax.persistence.NoResultException;
 
-/**
- * User: Rolandz
- * Date: 22/11/2016
- * Time: 8:23 PM
- */
 @Component
 public class UserDetailServiceImpl implements UserDetailsService {
     @Override

@@ -8,11 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * User: Rolandz
- * Date: 8/2/16
- * Time: 5:19 PM
- */
 public class CaptchaFilter implements Filter {
     private static final String VERIFICATION_CODE_KEY = "j_verification_code";
 

@@ -1,8 +1,5 @@
 package com.el.dc.api.database.exception;
 
-/**
- * User: Rolandz
- */
 public class AppException extends RuntimeException {
 
     private String errCode;

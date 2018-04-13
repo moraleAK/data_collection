@@ -12,11 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * User: Rolandz
- * Date: 23/11/2016
- * Time: 3:41 PM
- */
+
 @Component
 public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHandler {
     private static Logger LOG = LoggerFactory.getLogger(AuthenticationSuccessHandlerImpl.class);

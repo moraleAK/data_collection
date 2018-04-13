@@ -9,11 +9,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * User: Rolandz
- * Date: 5/24/16
- * Time: 3:56 PM
- */
 @Aspect
 public class UseReadOnlyDataSourceAspect {
     private static Logger LOG = LoggerFactory.getLogger(UseReadOnlyDataSourceAspect.class);

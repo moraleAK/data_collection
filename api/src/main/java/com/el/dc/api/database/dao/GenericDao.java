@@ -4,11 +4,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
-/**
- * User: Rolandz
- * Date: 5/27/16
- * Time: 3:36 PM
- */
 public interface GenericDao<T, KeyType> {
     T load(KeyType id);
 

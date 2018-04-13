@@ -6,11 +6,6 @@ import org.springframework.stereotype.Component;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 
-/**
- * User: Rolandz
- * Date: 7/21/16
- * Time: 3:41 PM
- */
 @Component
 public class GenericEntityListener {
     @PrePersist

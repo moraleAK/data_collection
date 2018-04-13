@@ -8,13 +8,6 @@ import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.security.web.session.HttpSessionDestroyedEvent;
 import org.springframework.stereotype.Component;
 
-/**
- * 记录用户登出日志
- *
- * User: Rolandz
- * Date: 02/03/2017
- * Time: 11:04 AM
- */
 @Component
 public class UserLogoutListener implements ApplicationListener<HttpSessionDestroyedEvent> {
     private static Logger LOG = LoggerFactory.getLogger(UserLogoutListener.class);
