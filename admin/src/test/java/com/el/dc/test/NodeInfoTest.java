@@ -1,11 +1,12 @@
 package com.el.dc.test;
 
+import com.el.dc.admin.socket.SocketRequestUtils;
 import com.el.dc.api.common.HttpClientUtils;
 import com.el.dc.api.entity.NodeInfo;
+import com.el.dc.api.service.NodeSensorDataService;
 import com.el.dc.api.to.NodeSensorDataReqTO;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
-import socket.SocketRequestUtils;
 
 import java.io.IOException;
 
@@ -30,7 +31,8 @@ public class NodeInfoTest {
         String data =
                 " {\"id\":\"20180405\",\"GPS_Lon\":233.234,\"GPS_Lat\":22.11,\"PH\":7.11,\"COD\":22.11,\"DOG\":33.22,\"NHN\":44.33,\"ZS\":55.44,\"TEMP\":66.55}";
         while (true) {
-            new SocketRequestUtils("118.178.57.153", 9991).send(data);
+          //  new SocketRequestUtils("118.178.57.153", 9991).send(data);
+            new SocketRequestUtils("127.0.0.1", 9991).send(data);
             Thread.sleep(1000);
             System.out.println("success");
         }

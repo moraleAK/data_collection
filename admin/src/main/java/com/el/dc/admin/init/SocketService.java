@@ -29,7 +29,7 @@ public class SocketService {
             }
         });
         new Thread(task).start();
-        LOG.info("socket listener start!");
+        LOG.info("com.el.dc.admin.socket listener start!");
     }
 
     public void run() throws IOException {

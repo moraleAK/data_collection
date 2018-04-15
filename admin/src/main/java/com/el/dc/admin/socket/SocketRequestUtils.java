@@ -1,8 +1,6 @@
-package socket;
+package com.el.dc.admin.socket;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 
@@ -27,9 +25,9 @@ public class SocketRequestUtils {
 
         socket.getOutputStream().write(reqData.toString().getBytes(charsetName));
         socket.close();
-//        socket.getOutputStream().flush();
+//        com.el.dc.admin.socket.getOutputStream().flush();
 //
-//        InputStream in = socket.getInputStream();
+//        InputStream in = com.el.dc.admin.socket.getInputStream();
 //        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
 //
 //        int i = -1;
@@ -37,7 +35,7 @@ public class SocketRequestUtils {
 //            byteArrayOutputStream.write(i);
 //        }
 //
-//        socket.close();
+//        com.el.dc.admin.socket.close();
 //        return new String(byteArrayOutputStream.toByteArray(), charsetName);
         return "success";
     }
