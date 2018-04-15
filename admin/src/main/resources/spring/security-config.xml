@@ -23,7 +23,8 @@
             <concurrency-control max-sessions="1" expired-url="/pages/account_warning.jsp"/>
         </session-management>
         <intercept-url pattern="/login" access="none" />
-        <intercept-url pattern="/**" access="isAuthenticated"/>
+        <!--<intercept-url pattern="/**" access="isAuthenticated"/>-->
+        <intercept-url pattern="/**" access="none"/>
         <form-login login-page="/pages/login.jsp" login-processing-url="/login"
                     authentication-success-handler-ref="authenticationSuccessHandlerImpl"
                     authentication-failure-handler-ref="authenticationFailureHandlerImpl"

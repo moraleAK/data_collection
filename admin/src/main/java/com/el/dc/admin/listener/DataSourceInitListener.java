@@ -1,16 +1,10 @@
-package com.el.dc.admin.lisener;
+package com.el.dc.admin.listener;
 
-import com.el.dc.admin.init.SocketService;
 import com.el.dc.api.common.HttpClientUtils;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.ContextStartedEvent;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.ServerSocket;
-import java.net.Socket;
 
 public class DataSourceInitListener implements ApplicationListener<ContextRefreshedEvent> {
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
