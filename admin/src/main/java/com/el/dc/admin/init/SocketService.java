@@ -32,14 +32,14 @@ public class SocketService {
         LOG.info("socket listener start!");
     }
 
-    public  void run() throws IOException {
+    public void run() throws IOException {
         // 监听指定的端口
         int port = Integer.valueOf(MyPropertyPlaceholderConfigurer.getPropertiesMap().get(MyProperties.DC_SOCKET_PORT));
         ServerSocket server = new ServerSocket(port);
         boolean a = true;
         while (a) {
-          Socket socket = server.accept();
-          SocketThread socketThread = new SocketThread(socket);
+            Socket socket = server.accept();
+            SocketThread socketThread = new SocketThread(socket);
         }
         server.close();
     }

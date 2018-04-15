@@ -1,5 +1,8 @@
 package com.el.dc.admin.netty;
 
+import com.el.dc.admin.properties.MyProperties;
+import com.el.dc.admin.properties.MyPropertyPlaceholderConfigurer;
+import com.el.dc.api.common.HttpClientUtils;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
@@ -62,6 +65,11 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
         // 第一种：接收字符串时的处理
         ByteBuf buf = (ByteBuf) msg;
         String rev = getMessage(buf);
+
+        // 转发请求到本机 http 接口进行处理
+        HttpClientUtils.sendHttpRequest(
+                MyPropertyPlaceholderConfigurer.getPropertiesMap().get(MyProperties.DC_HTTP_REQUEST_URL), rev
+        );
         LOG.info("receive data:{}", rev);
 
     }

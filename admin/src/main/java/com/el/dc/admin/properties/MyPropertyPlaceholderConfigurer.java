@@ -9,12 +9,12 @@ import java.util.Map;
 import java.util.Properties;
 
 public class MyPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer {
-    private static Map<String,String> propertiesMap;
+    private static Map<String, String> propertiesMap;
 
     @Override
     protected void processProperties(ConfigurableListableBeanFactory beanFactoryToProcess, Properties props) throws BeansException {
         super.processProperties(beanFactoryToProcess, props);
-        if(propertiesMap == null || propertiesMap.size() == 0) {
+        if (propertiesMap == null || propertiesMap.size() == 0) {
             propertiesMap = new HashMap<>();
             for (Object key : props.keySet()) {
                 String keyStr = key.toString();

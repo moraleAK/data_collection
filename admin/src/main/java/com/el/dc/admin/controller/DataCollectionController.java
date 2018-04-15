@@ -11,7 +11,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
@@ -33,7 +35,7 @@ public class DataCollectionController {
         LOG.info(data);
         try {
             nodeSensorDataService.addNodeSensorData(data);
-        }catch (Exception e){
+        } catch (Exception e) {
             return e.getMessage();
         }
         return "success!";
@@ -41,8 +43,35 @@ public class DataCollectionController {
 
     @ResponseBody
     @RequestMapping(value = "/node_info_add")
-    public String nodeInfoAdd(@RequestBody NodeInfo nodeInfo){
+    public String nodeInfoAdd(@RequestBody NodeInfo nodeInfo) {
         nodeInfoService.nodeInfoAdd(nodeInfo);
         return "add success!";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/node_info_add_4_form_data")
+    public void nodeInfoAdd2(NodeInfo nodeInfo, HttpServletResponse response) throws IOException {
+        nodeInfoService.nodeInfoAdd(nodeInfo);
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("node_info");
+        response.sendRedirect("/dc/get_node_infos");
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/get_node_infos")
+    public ModelAndView loadNodeInfos(NodeInfo nodeInfo) {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("node_info");
+        mav.addObject("nodeInfos", nodeInfoService.loadNodeInfos());
+        return mav;
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/get_node_sensor_datas")
+    public ModelAndView loadNodeSensorDatas(NodeInfo nodeInfo) {
+        ModelAndView mav = new ModelAndView();
+        mav.setViewName("node_sensor_data");
+        mav.addObject("nodeSensorDatas", nodeSensorDataService.loadNodeSensorDatas());
+        return mav;
     }
 }

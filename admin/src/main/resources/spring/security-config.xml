@@ -16,41 +16,41 @@
     <http pattern="/dc/data_receive" security="none" />
     <http pattern="/dc/node_info_add" security="none" />
 
-    <http auto-config="true" authentication-manager-ref="authenticationManager"
-          access-decision-manager-ref="decisionManager" pattern="/**">
-        <csrf disabled="true" />
-        <session-management>
-            <concurrency-control max-sessions="1" expired-url="/pages/account_warning.jsp"/>
-        </session-management>
-        <intercept-url pattern="/login" access="none" />
-        <!--<intercept-url pattern="/**" access="isAuthenticated"/>-->
-        <intercept-url pattern="/**" access="none"/>
-        <form-login login-page="/pages/login.jsp" login-processing-url="/login"
-                    authentication-success-handler-ref="authenticationSuccessHandlerImpl"
-                    authentication-failure-handler-ref="authenticationFailureHandlerImpl"
-                    always-use-default-target="true"
-        />
+    <!--<http auto-config="true" authentication-manager-ref="authenticationManager"-->
+          <!--access-decision-manager-ref="decisionManager" pattern="/**">-->
+        <!--<csrf disabled="true" />-->
+        <!--<session-management>-->
+            <!--<concurrency-control max-sessions="1" expired-url="/pages/account_warning.jsp"/>-->
+        <!--</session-management>-->
+        <!--<intercept-url pattern="/login" access="none" />-->
+        <!--&lt;!&ndash;<intercept-url pattern="/**" access="isAuthenticated"/>&ndash;&gt;-->
+        <!--<intercept-url pattern="/**" access="none"/>-->
+        <!--<form-login login-page="/pages/login.jsp" login-processing-url="/login"-->
+                    <!--authentication-success-handler-ref="authenticationSuccessHandlerImpl"-->
+                    <!--authentication-failure-handler-ref="authenticationFailureHandlerImpl"-->
+                    <!--always-use-default-target="true"-->
+        <!--/>-->
 
-        <logout invalidate-session="true" logout-url="/logout" logout-success-url="/login.jsp"/>
-    </http>
+        <!--<logout invalidate-session="true" logout-url="/logout" logout-success-url="/login.jsp"/>-->
+    <!--</http>-->
 
-    <authentication-manager alias="authenticationManager" >
-        <authentication-provider user-service-ref="userDetailServiceImpl">
-            <password-encoder ref="passwordEncoder" base64="true"/>
-        </authentication-provider>
-    </authentication-manager>
+    <!--<authentication-manager alias="authenticationManager" >-->
+        <!--<authentication-provider user-service-ref="userDetailServiceImpl">-->
+            <!--<password-encoder ref="passwordEncoder" base64="true"/>-->
+        <!--</authentication-provider>-->
+    <!--</authentication-manager>-->
 
-    <b:bean id="userDetailServiceImpl" class="com.el.dc.admin.security.UserDetailServiceImpl" />
-    <b:bean id="authenticationSuccessHandlerImpl" class="com.el.dc.admin.security.AuthenticationSuccessHandlerImpl" />
-    <b:bean id="authenticationFailureHandlerImpl" class="com.el.dc.admin.security.AuthenticationFailureHandlerImpl" />
+    <!--<b:bean id="userDetailServiceImpl" class="com.el.dc.admin.security.UserDetailServiceImpl" />-->
+    <!--<b:bean id="authenticationSuccessHandlerImpl" class="com.el.dc.admin.security.AuthenticationSuccessHandlerImpl" />-->
+    <!--<b:bean id="authenticationFailureHandlerImpl" class="com.el.dc.admin.security.AuthenticationFailureHandlerImpl" />-->
 
-    <beans:bean id="decisionManager" class="org.springframework.security.access.vote.AffirmativeBased">
-        <beans:constructor-arg>
-            <beans:list>
-                <beans:bean class="com.el.dc.admin.security.ResourceBasedVoter" />
-            </beans:list>
-        </beans:constructor-arg>
-    </beans:bean>
+    <!--<beans:bean id="decisionManager" class="org.springframework.security.access.vote.AffirmativeBased">-->
+        <!--<beans:constructor-arg>-->
+            <!--<beans:list>-->
+                <!--<beans:bean class="com.el.dc.admin.security.ResourceBasedVoter" />-->
+            <!--</beans:list>-->
+        <!--</beans:constructor-arg>-->
+    <!--</beans:bean>-->
 
-    <beans:bean id="passwordEncoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"  />
+    <!--<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder"  />-->
 </beans:beans>

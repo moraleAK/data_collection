@@ -1,9 +1,12 @@
 package com.el.dc.api.to;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class NodeSensorDataReqTO {
-    long id;
+    @JsonProperty(value = "id")
+    String deviceId;
     @JsonProperty(value = "GPS_Lon")
     double gpsLon;
     @JsonProperty(value = "GPS_Lat")
@@ -22,13 +25,14 @@ public class NodeSensorDataReqTO {
     @JsonProperty(value = "TEMP")
     double temp;
 
-    public long getId() {
-        return id;
+    public String getDeviceId() {
+        return deviceId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setDeviceId(String deviceId) {
+        this.deviceId = deviceId;
     }
+
 
     public double getGpsLon() {
         return gpsLon;

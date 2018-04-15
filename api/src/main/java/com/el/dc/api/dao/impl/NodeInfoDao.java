@@ -5,6 +5,7 @@ import com.el.dc.api.entity.NodeInfo;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.NoResultException;
+import java.util.List;
 
 @Repository
 public class NodeInfoDao  extends GenericDaoImpl<NodeInfo, Long> {
@@ -19,5 +20,10 @@ public class NodeInfoDao  extends GenericDaoImpl<NodeInfo, Long> {
         }catch (NoResultException nre){
             return null;
         }
+    }
+
+    public List<NodeInfo> loadNodeInfos(){
+        return query("from NodeInfo where deleted = false order by createTime desc ")
+                .setFirstResult(0).setMaxResults(30).getResultList();
     }
 }

@@ -18,7 +18,7 @@ public class NodeInfo extends BaseEntity {
 
     // 类型
     @Column(name = "type")
-    private String type;
+    private int type;
 
     // 硬件版本
     @Column(name = "hardware_version")
@@ -44,6 +44,18 @@ public class NodeInfo extends BaseEntity {
     @Column(name = "production_date")
     private String productionDate;
 
+    // 上次接收到数据的时间
+    @Column(name = "last_data_receive_timestamp",columnDefinition = "bigint(10) default 9999999999")
+    private long lastDataReceiveTimestamp;
+
+    public long getLastDataReceiveTimestamp() {
+        return lastDataReceiveTimestamp;
+    }
+
+    public void setLastDataReceiveTimestamp(long lastDataReceiveTimestamp) {
+        this.lastDataReceiveTimestamp = lastDataReceiveTimestamp;
+    }
+
     public String getDeviceId() {
         return deviceId;
     }
@@ -52,11 +64,11 @@ public class NodeInfo extends BaseEntity {
         this.deviceId = deviceId;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 

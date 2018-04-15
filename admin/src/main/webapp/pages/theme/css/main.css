@@ -1,0 +1,1496 @@
+body {
+    font: 14px/1.5 Tahoma, Helvetica, Arial, "Microsoft YaHei", sans-serif;
+    background: #f5f5f5;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w-nav-bgc {
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.w-btn-normal {
+    color: #57A3E5;
+    border-color: #57A3E5;
+    background: #fff;
+    height: 47px;
+}
+
+.w-btn-normal:hover {
+    background: #f5f5f5;
+}
+
+.w-btn-blue {
+    color: #fff;
+    background: #57A3E5;
+    height: 47px;
+}
+
+.w-btn-blue:hover, .w-btn-blue:active {
+    background: #6AB1EE;
+    color: #fff;
+}
+
+.w-btn-red {
+    color: #fff;
+    background: #EA7160;
+    height: 47px;
+}
+
+.w-btn-red:hover, .w-btn-red:active {
+    background: #EE8C7D;
+    color: #fff;
+}
+
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.clearfloat {
+    zoom: 1
+}
+
+.w-text-red {
+    color: #EA4F4F !important;
+}
+
+.w-left {
+    text-align: left;
+}
+
+.w-right {
+    text-align: right;
+}
+
+.w-center {
+    text-align: center;
+}
+
+.w-table {
+    width: 100%;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.w-table th {
+    height: 50px;
+    text-align: center;
+    background: #57A3E5;
+    color: #fff;
+}
+
+.w-table tr {
+    border-bottom: 1px solid #E7E7E7;
+    height: 50px;
+    text-align: center;
+    background: #fff;
+}
+
+.w-table .w-num-r {
+    color: #EA4F4F;
+}
+
+.w-table .w-num-g {
+    color: #24AE6C;
+}
+
+/* topBar */
+.w-topBar {
+    /*min-width: 1440px;*/
+    height: 83px;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.w-topBar-content {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.w-logo {
+    background: url(../image/logo.png) no-repeat left center;
+    width: 420px;
+    height: 50px;
+    padding-left: 240px;
+    font-size: 15px;
+    margin-top: 18px;
+    color: #5D6169;
+    line-height: 50px;
+}
+
+.w-index-logo {
+    background: url(../image/logo.png) no-repeat left center;
+    width: 200px;
+    height: 83px;
+    font-size: 15px;
+    /*margin-left:60px;*/
+    color: #5D6169;
+    line-height: 50px;
+    float: left;
+    margin-right: 30px;
+}
+
+.w-topBar-rlink {
+    text-align: right;
+    color: #70747C;
+    margin-top: 16px;
+    margin-right: -15px;
+}
+
+.w-topBar-rlink span {
+    color: #1781E0;
+    margin-right: 5px;
+}
+
+.w-topBar-link {
+    text-align: center;
+    color: #70747C;
+}
+
+.w-topBar-link span {
+    color: #1781E0;
+    margin-right: 5px;
+}
+
+.w-topBar-link a {
+    height: 68px;
+    line-height: 60px;
+    font-size: 20px;
+    color: #70747C;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.w-topBar-link a.act {
+    border-bottom: 5px solid #ADADAD;
+    color: #1781E0;
+}
+
+a.w-link:link, a.w-link:visited {
+    text-align: right;
+    text-decoration: none;
+}
+
+a.w-link:hover {
+    color: #999;
+    text-decoration: none;
+}
+
+.w-topBar-menu {
+    float: left;
+}
+
+.w-topBar-menu a {
+    font-size: 20px;
+    margin: 0 20px;
+    line-height: 83px;
+    display: block;
+    height: 83px;
+    float: left;
+    text-decoration: none;
+    color: #5D6169;
+}
+
+.w-topBar-menu a:hover {
+    color: #1781E0;
+}
+
+.w-topBar-menu a.act {
+    color: #1781E0;
+    border-bottom: 5px solid #ADADAD;
+}
+
+.w-tobBar-right {
+    float: right;
+}
+
+.w-topBar-hotline {
+    /*background: url("../image/hotline.png") no-repeat left center;*/
+    width: 189px;
+    height: 20px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+.w-tobBar-right .w-topBar-link {
+    float: left;
+}
+
+.w-tobBar-right .w-topBar-link a {
+    margin-right: 10px;
+}
+
+.w-topBar-info {
+    color: #1781E0;
+    font-size: 12px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* topBar */
+
+/* regWin */
+.w-reg {
+    width: 1170px;
+}
+
+.w-reg-win {
+    width: 1192px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.w-reg-btns button {
+    width: 120px;
+}
+
+.w-reg-nv div {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #AEAEAE;
+    background: #E7E7E7;
+}
+
+.w-reg-nv div.w-act {
+    background: #fff;
+    border: 3px solid #57A3E5;
+    color: #57A3E5;
+}
+
+.w-reg-body {
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.w-reg-body form {
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* regWin */
+
+/* loginWin */
+.w-login-win {
+    width: 941px;
+    height: 534px;
+    background: url(../image/login.png) no-repeat center center;
+    margin: 100px auto;
+    position: relative;
+}
+
+.w-login-form {
+    width: 381px;
+    position: absolute;
+    right: 100px;
+    top: 160px;
+}
+
+.w-login-form .form-control {
+    width: 368px;
+    height: 37px;
+    margin-bottom: 20px;
+}
+
+.w-login-form-code {
+    height: 80px;
+}
+
+.w-login-form-code input.form-control {
+    width: 200px;
+    float: left;
+}
+
+.w-login-form-code img {
+    display: block;
+    float: left;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 37px;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.w-login-form-code a {
+    margin-top: 10px;
+    display: block;
+    float: left;
+    margin-left: 10px;
+    color: #5D6169;
+}
+
+.w-login-read {
+    height: 50px;
+    margin-top: 20px;
+}
+
+.w-login-read label {
+    font-size: 14px;
+    color: #57A3E5;
+    display: block;
+    float: left;
+}
+
+.w-login-read a {
+    display: block;
+    float: left;
+    color: #5D6169;
+    font-size: 14px;
+}
+
+.w-login-read a.w-float-r {
+    float: right;
+}
+
+.w-login-form .w-btn-blue {
+    width: 381px;
+}
+
+.w-login-loginBar {
+    position: absolute;
+    width: 59px;
+    height: 180px;
+    /*background: url(../image/loginBar.png) no-repeat center center;*/
+    right: -46px;
+    top: 40px;
+}
+
+.w-login-left-text {
+    position: absolute;
+    left: 120px;
+    bottom: 50px;
+}
+
+.w-login-left-text span {
+    color: #5D6169;
+    font-size: 14px;
+
+}
+
+.navbar-brand {
+    position: relative;
+    left: -15px;
+}
+
+.w-login-left-text button {
+    width: 84px;
+    height: 33px;
+    background: #EA7160;
+    color: #fff;
+    border: 0;
+    border-radius: 3px;
+}
+
+/* loginWin */
+
+/* index */
+.w-index-dash {
+    background: #5D6169;
+}
+
+.w-index-dash-info .w-title {
+    margin-top: 30px;
+    color: #fff;
+}
+
+.w-index-dash-info .w-title span {
+    margin-left: 20px;
+}
+
+.w-index-dash-info .w-text {
+    font-size: 12px;
+    color: #eee;
+    margin-top: 10px;
+}
+
+.w-index-dash-info {
+    border-bottom: 1px solid #999;
+    padding-bottom: 30px;
+}
+
+.w-index-dash-info .w-btns {
+    text-align: right;
+    padding-top: 30px;
+}
+
+.w-index-dash-info .w-btns button {
+    width: 120px;
+}
+
+.w-index-dash-board {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.w-index-dash-board div {
+    display: inline-block;
+    width: auto;
+    height: 104px;
+    text-align: center;
+    /*line-height: 30px;*/
+}
+
+.real2-footer {
+    display: block;
+    position: relative;
+    top: -10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container-padding {
+    padding: 0 15px;
+}
+
+.w-index-dash-board td {
+    height: 104px;
+    text-align: center;
+    color: #fff;
+}
+
+.w-dash {
+    padding: 25px 0;
+    font-size: 14px;
+}
+
+.w-index-dash-board .w-dash {
+    border: 1px solid #57A3E5;
+    background: #74767A;
+    color: #fff;
+}
+
+.w-index-dash-board .w-dash.w-act {
+    background: #57A3E5;
+}
+
+.w-index-dash-board .w-dash div.w-num {
+    margin-bottom: 10px;
+}
+
+.w-index-chart .w-title {
+    font-size: 20px;
+    color: #5D6169;
+    margin-bottom: 10px;
+}
+
+.information-body {
+    margin-top: 30px;
+}
+
+.w-index-chart .w-tabs div {
+    height: 42px;
+    width: 120px;
+    text-align: center;
+    line-height: 42px;
+    float: left;
+}
+
+.w-index-chart .w-tabs div.w-act {
+    background: #57A3E5;
+    color: #fff;
+}
+
+.w-index-chart .w-sel {
+    text-align: right;
+}
+
+.w-index-chart .w-sel label {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.w-index-chart .w-chart {
+    background: #fff;
+    padding: 10px;
+}
+
+.w-index-chart .w-record {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.w-index-chart .w-more {
+    text-align: right;
+}
+
+.w-more {
+    top: 6px;
+    font-size: 14px;
+    padding: 0;
+    position: relative;
+    left: 15px;
+}
+
+/* query */
+.w-query {
+    background: #5D6169;
+    padding: 20px 0;
+    color: #fff;
+}
+
+.w-query .w-date select {
+    float: left;
+    width: 120px;
+}
+
+.w-query .w-date div {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 50px;
+    text-align: center;
+}
+
+.w-query .w-sel span {
+    display: block;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+
+.w-query .w-sel span.w-act, .w-query .w-sel span.w-act:hover {
+    background: #57A3E5;
+    border-radius: 3px;
+}
+
+.w-query .w-sel span:hover {
+    background: #6C7079;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.w-query .w-btn .w-btn-w {
+    width: 120px;
+}
+
+.w-query-title {
+    margin-top: 40px;
+}
+
+.w-query-title .w-title {
+    font-size: 20px;
+    color: #5D6169;
+    margin-bottom: 10px;
+}
+
+.w-query-title .w-btn {
+    text-align: right;
+}
+
+.w-query-title .w-btn button {
+    width: 120px;
+}
+
+/* info */
+.w-info {
+    background: #5D6169;
+    color: #fff;
+    font-size: 16px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.w-info span {
+    padding: 0 20px;
+}
+
+.w-info .w-btn button {
+    width: 120px;
+}
+
+.w-info-content .w-menu {
+    margin-top: 20px;
+}
+
+.w-info-content .w-menu div {
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    border: 1px solid #AEAEAE;
+    background: #E7E7E7;
+}
+
+.w-info-content .w-menu div.w-act {
+    background: #fff;
+    border: 1px solid #57A3E5;
+    color: #57A3E5;
+}
+
+.w-info-content .w-form {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+}
+
+.w-info-content .w-form tr td {
+    height: 30px;
+    padding: 5px;
+}
+
+.w-info-content .w-form tr td.w-title {
+    text-align: right;
+    width: 300px;
+}
+
+.w-info-content .w-form .w-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.w-info-content .w-form .w-btn button {
+    width: 120px;
+}
+
+/* win */
+.w-win {
+    width: 1005px;
+    margin: 0 auto;
+    margin-top: 100px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 3px #ccc;
+}
+
+.w-win .w-title {
+    font-size: 24px;
+    color: #5D6169;
+}
+
+.w-win .w-close {
+    text-align: right;
+}
+
+.w-win .w-middle {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.w-win .w-list-l {
+    margin-top: 20px;
+
+}
+
+.w-win .w-list-l td {
+    height: 35px;
+}
+
+.w-win .w-list-r {
+    background: #F5F8FA;
+    padding: 15px;
+}
+
+.w-win .w-list-r td {
+    height: 50px;
+    padding: 0 20px;
+}
+
+.w-win .w-b {
+    color: #1781E0;
+}
+
+.w-win .w-r {
+    color: #EA4F4F;
+}
+
+.w-win .w-sum {
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.w-win .w-sum .w-b {
+    text-align: right;
+    font-size: 30px;
+}
+
+.w-win .w-sum .w-t {
+    text-align: right;
+    color: #5D6169;
+}
+
+.w-win .w-sum .w-name {
+    height: 40px;
+    line-height: 40px;
+}
+
+.w-win hr {
+    border: 1px solid #57A3E5;
+}
+
+.w-win .w-btn {
+    text-align: center;
+}
+
+.w-win .w-btn button {
+    margin-top: 20px;
+    width: 120px;
+}
+
+.dli {
+    line-height: 34px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.w-sign {
+    position: relative;
+    top: -14px;
+    color: #fff;
+}
+
+#total {
+    width: 15%;
+}
+
+#general {
+    width: 15%;
+}
+
+#tocollect {
+    width: 15%;
+}
+
+#margin {
+    width: 15%;
+}
+
+#earnings {
+    width: 15%;
+}
+
+#topay {
+    width: 15%;
+}
+
+.redMessage {
+    position: relative;
+    text-align: center;
+}
+
+.pannel-name {
+    position: relative;
+    font-size: 14px;
+    padding: 6px 12px;
+    width: 15%;
+    height: 34px;
+    display: inline-block;
+    text-align: right;
+}
+
+.pannel-newName {
+    position: relative;
+    font-size: 14px;
+    padding: 6px 12px;
+    width: 21%;
+    height: 34px;
+    display: inline-block;
+    text-align: right;
+}
+
+.pannel-inputbox {
+    position: relative;
+    display: inline-block;
+    width: 78%;
+    margin-bottom: 15px;
+}
+
+.inputbox {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 15px;
+}
+
+.phoneNum {
+    width: 78%;
+    float: right;
+    right: 6.5%;
+    margin-bottom: 0;
+}
+
+#amount_span, #market_span {
+    position: relative;
+    display: block;
+    text-align: center;
+    top: -15px;
+}
+
+.withdrawDiv {
+    width: 99.5%;
+    float: right;
+    text-align: left;
+}
+
+.RealTimeWithdraw {
+    width: 70%;
+    position: relative;
+    left: 14.5%;
+}
+
+.marketWrapper {
+    position: relative;
+    margin: 15px 0;
+    left: -5px;
+}
+
+.yue {
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.input-group-wrapper {
+    position: relative;
+    width: 45%;
+    display: inline-block;
+}
+
+.accountPhoneNo {
+    position: relative;
+    top: -12px;
+}
+
+.w-reg-win .w-reg-body .real2-form-horizontal #table1 {
+    border-bottom: solid 1px #ccc;
+}
+
+.w-reg-win .w-reg-body .real2-form-horizontal #table1 .real2-businessLicense, .real2-organizationCertificatePic, .real2-taxRegistrationCertificatePic, .real2-legalRepresentativeIdPic, .real2-legalRepresentativeIdPic2, .threeInOne2 {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.w-reg-win .w-reg-body .real2-form-horizontal .image-svgs {
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/*real3*/
+.w-reg-win .w-reg-body #realNameForm {
+    width: 100%;
+}
+
+#yuetest {
+    position: relative;
+    right: -10%;
+    top: -10px \0;
+}
+
+#balance2container {
+    position: relative;
+    display: inline-block;
+    width: 74%;
+    text-align: right;
+}
+
+.selectMarket {
+    position: relative;
+    width: 78.5%;
+}
+
+.container .w-reg-win .w-reg-body .realNameForm .table .image-svgs img {
+    width: 200px;
+    height: 300px;
+}
+
+.w-reg-body-step1 input {
+    width: 94%;
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-menu ul li ul {
+    position: absolute;
+    display: none;
+    float: right;
+    width: 120px;
+    right: 15px;
+}
+
+.nav-menu ul li:hover ul {
+    display: block;
+}
+
+.nav-menu ul {
+    padding: 0;
+}
+
+.real4Div {
+    padding-right: 0;
+}
+
+.cer-padding {
+    padding-left: 15px;
+}
+
+@media screen and (min-width: 1000px) {
+    .image-svgs {
+        width: 300px;
+        height: 300px;
+    }
+
+    #table1, #table2, #table3 {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .navbar-brand {
+        position: relative;
+        left: 0;
+    }
+
+    .w-index-dash-board #total, #general, #tocollect, #margin, #earnings {
+        width: 100%;
+    }
+
+    .w-index-dash-board .w-sign {
+        color: #fff;
+        display: none;
+    }
+
+    #topay, .transactionState, .transactionStates {
+        display: none;
+    }
+
+    .transactionPayer, .transactionPayers, .transactionGather, .transactionGathers {
+        display: none;
+    }
+
+    #target-menu ul li a {
+        margin: 0;
+    }
+
+    .w-index-dash-board {
+        position: relative;
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    .w-index-dash-board .w-dash.w-act {
+        background: #57A3E5;
+        border-radius: 5px;
+    }
+
+    .w-index-dash-board .w-dash {
+        border: 0;
+        background: #5D6169;
+        color: #fff;
+        height: auto;
+    }
+
+    .w-sum-name {
+        float: left;
+    }
+
+    .w-num {
+        float: right;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    .w-dash {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #marketCode, .marketCodes {
+        display: none;
+    }
+
+    /*交易查询页面*/
+    #queryDetailReset, #downloadReport {
+        display: none;
+    }
+
+    #form-group3 {
+        text-align: center;
+    }
+
+    .form-group .w-sel span {
+        margin: 0;
+        padding: 0 8px;
+    }
+
+    /*会员详情页面*/
+    .member-control-label {
+        display: none;
+    }
+
+    /*账户设置页面*/
+    .pannel-name {
+        font-size: 16px;
+        padding: 6px 0;
+        width: 100%;
+        height: 34px;
+        display: inline-block;
+        text-align: left;
+    }
+
+    .pannel-inputbox {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .pannel-inputbox2 {
+        position: relative;
+        display: inline-block;
+        width: 83%;
+        margin-bottom: 15px;
+    }
+
+    .pannel-inputbox3 {
+        display: inline-block;
+        width: 70%;
+        margin-top: 100px;
+        margin-left: 72px;
+        font-size: 20px;
+    }
+
+    /*出金申请页面*/
+    .phoneNum {
+        position: relative;
+        width: 100%;
+        right: 0;
+        margin-bottom: 15px;
+    }
+
+    .RealTimeWithdraw {
+        width: 100%;
+        position: relative;
+        left: 0;
+    }
+
+    .accountWarnning {
+        display: none;
+    }
+
+    .warnningcontent {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .marketWrapper {
+        position: relative;
+        margin: 15px 0;
+        left: 0;
+
+    }
+
+    .withdrawDiv .marketWrapper .selectMatket {
+        width: 100%;
+    }
+
+    .withdrawDiv .marketWrapper .selectMatket .marketSelecter {
+        display: block;
+        width: 100%;
+    }
+
+    .input-group-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .accountPhoneNo {
+        position: relative;
+        top: 0;
+    }
+
+    /*登录界面*/
+    .w-topBar-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .w-login-form .w-btn-blue {
+        width: 100%;
+    }
+
+    .w-topBar {
+        width: 100%;
+    }
+
+    .w-login-win {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #fff;
+    }
+
+    .w-tobBar-right {
+        display: none;
+    }
+
+    .w-login-form {
+        width: 100%;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    .w-login-form .form-control {
+        width: 100%;
+        height: 37px;
+        margin-bottom: 20px;
+    }
+
+    .w-login-form-code {
+        height: 80px;
+    }
+
+    .w-login-form-code input.form-control {
+        width: 60%;
+        float: left;
+    }
+
+    .w-login-form-code a {
+        margin-top: 10px;
+        float: left;
+        margin-left: 10px;
+        color: #5D6169;
+        display: none;
+    }
+
+    .w-login-form-code img {
+        display: block;
+        float: left;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        height: 37px;
+        width: 36%;
+        margin-left: 10px;
+    }
+
+    .loginContainer {
+        background-color: #fff;
+        border: solid 1px #ccc;
+        border-radius: 0 0 4px 4px;
+        height: 100%;
+        margin-top: 20px;
+    }
+
+    .loginContainer .w-login-formcontainer {
+        width: 80%;
+    }
+
+    .panel {
+        position: relative;
+        width: 100%;
+    }
+
+    .w-reg {
+        position: relative;
+        width: 100%;
+    }
+
+    #registerForm {
+        padding: 0;
+    }
+
+    .w-reg-win {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .w-reg-nv div {
+        padding: 0 15px;
+        overflow: hidden;
+    }
+
+    .w-reg-body-step1 .form-horizontal {
+        width: 90%;
+    }
+
+    /*注册界面*/
+    .register-xmzf {
+        display: none;
+    }
+
+    .w-reg-body-step1 input {
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    .label-name {
+        margin-left: 0;
+    }
+
+    .w-real1-span {
+        margin: 0 15px;
+    }
+
+    /*real2*/
+    .w-reg-body .real2-form-horizontal {
+        width: 100%;
+    }
+
+    .threeInOne {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+
+    .w-reg-body .real2-form-horizontal #table1 {
+        width: 100%;
+    }
+
+    .w-reg-win .w-reg-body .real2-form-horizontal #table1, #table2 {
+        text-align: center;
+    }
+
+    .w-reg-win .w-reg-body .real2-form-horizontal #table1 .real2-businessLicense, .real2-organizationCertificatePic, .real2-taxRegistrationCertificatePic, .real2-legalRepresentativeIdPic, .real2-legalRepresentativeIdPic2, .threeInOne2 {
+        display: inline-block;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .w-reg-win .w-reg-body .real2-form-horizontal .threeInOne2-wrapper {
+        text-align: center;
+    }
+
+    .real2-footer {
+        text-align: center;
+    }
+
+    .w-reg-win .w-reg-body .real2-form-horizontal img {
+        width: 100%;
+        height: auto;
+    }
+
+    #realNameForm3 {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /*real4*/
+    .w-reg-nv {
+        width: 96%;
+        background-color: #eee;
+        position: relative;
+        left: 2%;
+    }
+
+    .information-body {
+        margin-top: 0;
+    }
+
+    .w-reg-win .w-reg-nv4 {
+        margin: 0;
+        text-align: center;
+    }
+
+    .real4Div form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .w-reg-nv span {
+        display: none;
+    }
+
+    .yue {
+        position: relative;
+        text-align: left;
+        top: -24px;
+    }
+
+    #yuetext {
+        position: relative;
+        top: -4px;
+        top: -10px \0;
+    }
+
+    #balance2container {
+        width: 100%;
+    }
+
+    .selectMarket {
+        width: 100%;
+        height: 34px;
+    }
+
+    .w-index-chart .w-record, .w-query-title {
+        margin-top: 20px;
+    }
+
+    .w-logo-text {
+        display: none;
+    }
+
+    .w-reg-nv div {
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border: 1px solid #AEAEAE;
+        background: #eee;
+    }
+
+    .form2-pad {
+        padding: 10px;
+    }
+
+    #balance2container {
+        text-align: left;
+    }
+
+    #gif {
+        left: 0;
+        top: 24px;
+    }
+
+    .wrs-panel-heading {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-menu ul li ul {
+        position: absolute;
+        display: none;
+        z-index: 500;
+    }
+
+    .w-logo {
+        background: url(../image/logo.png) no-repeat left center;
+        height: 50px;
+        width: auto;
+        margin: 18px 0 0 -15px;
+        position: relative;
+        color: #5D6169;
+        line-height: 50px;
+    }
+
+    .pdf-container {
+        width: 100%;
+    }
+
+    #myPrintArea {
+        margin: 10px 0 0 0;
+        padding: 0;
+    }
+
+    .w-list-r {
+        padding: 0;
+    }
+
+    .w-list-l-c {
+        padding: 0;
+    }
+
+    .w-win {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 100px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 3px #ccc;
+    }
+
+    .w-top {
+        margin: 0;
+    }
+
+    .w-win .w-list-r td {
+        height: 35px;
+        padding: 0px;
+    }
+
+    .w-win .w-list-r td:nth-child(odd) {
+        height: 35px;
+        padding-left: 6px;
+    }
+
+    .w-win .w-list-r td:nth-child(even) {
+        padding-left: 10px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-button {
+        text-align: center;
+    }
+
+    .form-control {
+        margin-left: 0;
+    }
+
+    .w-title-text {
+        padding-left: 0;
+    }
+
+    .container-padding {
+        padding: 0;
+    }
+
+    .cer-padding {
+        padding-left: 0;
+    }
+}
+
+#del {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -300px;
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: #eee 3px 3px;
+    border: 1px solid #ddd;
+    line-height: 100px;
+}
+
+.layout {
+    text-decoration: none;
+}
+
+.layout:hover {
+    text-decoration: underline;
+}
+
+/*对ie9以上的hack*/
+.btn-hack {
+    top: -1px;
+    top: -13px \0;
+}
+
+/*对IE edge的兼容*/
+/*@charset "<Any Modern Browser but MSIE 10- or FF 18- >";*/
+/*_:-ms-lang(x), .btn-hack { top:-13px; }*/

@@ -44,7 +44,7 @@ public class ResourceBasedVoter implements AccessDecisionVoter<Object> {
     }
 
     private boolean isSysadmin(final Authentication authentication) {
-        UserDetails userDetails = ((UserDetails)authentication.getPrincipal());
+        UserDetails userDetails = ((UserDetails) authentication.getPrincipal());
         return userDetails.getUsername().equals(SYS_ADMIN);
     }
 

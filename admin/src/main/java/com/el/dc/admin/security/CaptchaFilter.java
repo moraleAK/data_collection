@@ -21,7 +21,7 @@ public class CaptchaFilter implements Filter {
             vsInSession = "";
         }
 
-        if(vsInSession.toString().equalsIgnoreCase(vcPresented)) {
+        if (vsInSession.toString().equalsIgnoreCase(vcPresented)) {
             chain.doFilter(request, response);
             return;
         } else {

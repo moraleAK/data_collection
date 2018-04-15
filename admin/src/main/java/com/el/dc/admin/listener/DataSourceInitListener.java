@@ -10,7 +10,7 @@ public class DataSourceInitListener implements ApplicationListener<ContextRefres
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         System.out.println("############################################\n" +
                 "###############################################################");
-        if(contextRefreshedEvent.getApplicationContext().getParent() == null){
+        if (contextRefreshedEvent.getApplicationContext().getParent() == null) {
             System.out.println("############################################\n" +
                     "###############################################################");
         }
@@ -25,12 +25,13 @@ public class DataSourceInitListener implements ApplicationListener<ContextRefres
 //            e.printStackTrace();
 //        }
     }
+
     public void onApplicationEvent(ContextClosedEvent contextClosedEvent) {
         System.out.println("############################################\n" +
                 "###############################################################");
     }
 
     public static void main(String[] args) {
-        HttpClientUtils.sendHttpRequest("http://localhost:9001/dc/data_receive" ,"hhhhh");
+        HttpClientUtils.sendHttpRequest("http://localhost:9001/dc/data_receive", "hhhhh");
     }
 }
