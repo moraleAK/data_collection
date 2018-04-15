@@ -50,6 +50,7 @@ public class NodeSensorDataService {
         nodeSensorData.setGpsLatitude(reqTO.getGpsLat());
         nodeSensorData.setGpsLongitude(reqTO.getGpsLon());
         nodeSensorData.setNhn(reqTO.getNhn());
+        nodeSensorData.setPh(reqTO.getPh());
         nodeSensorData.setTemp(reqTO.getTemp());
         nodeSensorData.setTimestamp(System.currentTimeMillis());
         nodeSensorData.setZs(reqTO.getZs());
