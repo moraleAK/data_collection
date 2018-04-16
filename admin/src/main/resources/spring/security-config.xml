@@ -7,14 +7,14 @@
                  http://www.springframework.org/schema/beans/spring-beans.xsd
                  http://www.springframework.org/schema/security
                  http://www.springframework.org/schema/security/spring-security-4.0.xsd">
-    <http pattern="*.html" security="none" />
-    <http pattern="*.jsp" security="none" />
-    <http pattern="/**/*.png" security="none" />
-    <http pattern="/**/*.svg" security="none" />
-    <http pattern="/**/*.js" security="none" />
-    <http pattern="/**/*.css" security="none" />
-    <http pattern="/dc/data_receive" security="none" />
-    <http pattern="/dc/node_info_add" security="none" />
+    <!--<http pattern="*.html" security="none" />-->
+    <!--<http pattern="*.jsp" security="none" />-->
+    <!--<http pattern="/**/*.png" security="none" />-->
+    <!--<http pattern="/**/*.svg" security="none" />-->
+    <!--<http pattern="/**/*.js" security="none" />-->
+    <!--<http pattern="/**/*.css" security="none" />-->
+    <!--<http pattern="/dc/data_receive" security="none" />-->
+    <!--<http pattern="/dc/node_info_add" security="none" />-->
 
     <!--<http auto-config="true" authentication-manager-ref="authenticationManager"-->
           <!--access-decision-manager-ref="decisionManager" pattern="/**">-->
