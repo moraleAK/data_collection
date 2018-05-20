@@ -25,6 +25,16 @@ public class NodeSensorDataReqTO {
 
     @JsonProperty(value = "TEMP")
     double temp;
+    @JsonProperty(value = "ERRCODE")
+    String errorCode;
+
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
 
     public String getDeviceId() {
         return deviceId;

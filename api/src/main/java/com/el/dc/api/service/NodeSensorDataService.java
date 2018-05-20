@@ -54,6 +54,7 @@ public class NodeSensorDataService {
         nodeSensorData.setTemp(reqTO.getTemp());
         nodeSensorData.setTimestamp(System.currentTimeMillis());
         nodeSensorData.setZs(reqTO.getZs());
+        nodeSensorData.setErrorCode(reqTO.getErrorCode());
         nodeSensorDataDao.persist(nodeSensorData);
     }
 

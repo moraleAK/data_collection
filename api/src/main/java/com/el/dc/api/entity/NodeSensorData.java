@@ -37,6 +37,16 @@ public class NodeSensorData extends BaseEntity{
     private double temp;
     @Column(name = "zs")
     private double zs;
+    @Column(name = "error_code")
+    private String errorCode;
+
+    public String getErrorCode() {
+        return errorCode;
+    }
+
+    public void setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+    }
 
     public double getPh() {
         return ph;

@@ -41,6 +41,9 @@
         <th class="transactionType" style="text-align: left;">COD【COD】</th>
         <th class="transactionType" style="text-align: left;">DOG【DOG】</th>
         <th class="transactionType" style="text-align: left;">TEMP【TEMP】</th>
+        <th class="transactionType" style="text-align: left;">GPS经度【gpsLongitude】</th>
+        <th class="transactionType" style="text-align: left;">GPS纬度【gpsLatitude】</th>
+        <th class="transactionType" style="text-align: left;">错误码【errorCode】</th>
         <%--<th class="transactionType" style="text-align: left;"></th>--%>
         </thead>
         <tbody>
@@ -61,6 +64,9 @@
             <td class="transactionType" style="text-align: left;"><%=nodeSensorDatas.get(i).getDog()%>
             </td>
             <td class="transactionType" style="text-align: left;"><%=nodeSensorDatas.get(i).getTemp()%>
+            <td class="transactionType" style="text-align: left;"><%=nodeSensorDatas.get(i).getGpsLongitude()%>
+            <td class="transactionType" style="text-align: left;"><%=nodeSensorDatas.get(i).getGpsLatitude()%>
+            <td class="transactionType" style="text-align: left;"><%=nodeSensorDatas.get(i).getErrorCode()%>
             <td class="transactionType" style="text-align: left;">
             <%--<a href="/web/edit_student?id=<%=nodeInfos.get(i).getId()%>" target="_blank">编辑</a>--%>
         </tr>
