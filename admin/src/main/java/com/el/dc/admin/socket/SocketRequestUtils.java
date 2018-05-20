@@ -1,5 +1,8 @@
 package com.el.dc.admin.socket;
 
+import com.el.dc.admin.util.FileUtils;
+
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.Socket;
@@ -24,6 +27,14 @@ public class SocketRequestUtils {
         );
 
         socket.getOutputStream().write(reqData.toString().getBytes(charsetName));
+
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        socket.getOutputStream().write(FileUtils.fileRead("D:\\222.png"));
         socket.close();
 //        com.el.dc.admin.socket.getOutputStream().flush();
 //

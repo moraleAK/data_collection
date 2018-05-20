@@ -24,13 +24,13 @@ public class DataCollectionService {
     }
 
     public void start() throws Exception {
-        LOG.info("netty service start!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        LOG.info("-------------------------------netty service start-----------------------------");
         EventLoopGroup bossGroup = new NioEventLoopGroup();
 
         EventLoopGroup group = new NioEventLoopGroup();
         try {
             ServerBootstrap sb = new ServerBootstrap();
-            sb.option(ChannelOption.SO_BACKLOG, 1024);
+            sb.option(ChannelOption.SO_BACKLOG, 1024 * 20);
             sb.group(group, bossGroup) // 绑定线程池
                     .channel(NioServerSocketChannel.class) // 指定使用的channel
                     .localAddress(this.port)// 绑定监听端口
