@@ -61,7 +61,7 @@
                     <stopPort>9093</stopPort>
                     <daemon>true</daemon>
                     <httpConnector>
-                        <port>9001</port>
+                        <port>8099</port>
                     </httpConnector>
                     <webApp>
                         <contextPath>/</contextPath>

@@ -34,7 +34,7 @@ public class SocketRequestUtils {
             e.printStackTrace();
         }
 
-        socket.getOutputStream().write(FileUtils.fileRead("D:\\222.png"));
+        socket.getOutputStream().write(FileUtils.fileRead("D:/data.png"));
         socket.close();
 //        com.el.dc.admin.socket.getOutputStream().flush();
 //

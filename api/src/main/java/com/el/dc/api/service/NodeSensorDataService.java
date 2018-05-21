@@ -55,6 +55,7 @@ public class NodeSensorDataService {
         nodeSensorData.setTimestamp(System.currentTimeMillis());
         nodeSensorData.setZs(reqTO.getZs());
         nodeSensorData.setErrorCode(reqTO.getErrorCode());
+        nodeSensorData.setPictureName(reqTO.getPictureName());
         nodeSensorDataDao.persist(nodeSensorData);
     }
 

@@ -28,6 +28,17 @@ public class NodeSensorDataReqTO {
     @JsonProperty(value = "ERRCODE")
     String errorCode;
 
+    @JsonProperty(value = "pictureName")
+    String pictureName;
+
+    public String getPictureName() {
+        return pictureName;
+    }
+
+    public void setPictureName(String pictureName) {
+        this.pictureName = pictureName;
+    }
+
     public String getErrorCode() {
         return errorCode;
     }

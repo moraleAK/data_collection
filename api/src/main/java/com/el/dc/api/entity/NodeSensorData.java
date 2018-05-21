@@ -39,6 +39,16 @@ public class NodeSensorData extends BaseEntity{
     private double zs;
     @Column(name = "error_code")
     private String errorCode;
+    @Column(name = "picture_name")
+    private String pictureName;
+
+    public String getPictureName() {
+        return pictureName;
+    }
+
+    public void setPictureName(String pictureName) {
+        this.pictureName = pictureName;
+    }
 
     public String getErrorCode() {
         return errorCode;

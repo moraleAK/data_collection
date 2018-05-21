@@ -48,13 +48,19 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         LOG.info(" {}通道不活跃！", ctx.channel().localAddress().toString());
         LOG.info("data info :{}",map.get(getKey(ctx, 1)));
-        byte[] bytes = ((ByteArrayOutputStream)map.get(getKey(ctx,2))).toByteArray();
-
-        // 图片存储
-        FileUtils.fileWrite(bytes,"d:/data_collection_pic/" + MD5Utils.md5(bytes) + ".png");
-        LOG.info("PIC SIZE :{}", bytes.length);
+        HashMap<String, String> reqMap = new ObjectMapper().readValue((String) map.get(getKey(ctx,1)), HashMap.class);
+        if(map.get(getKey(ctx,2)) != null){
+            byte[] bytes = ((ByteArrayOutputStream)map.get(getKey(ctx,2))).toByteArray();
+            String picName = MD5Utils.md5(bytes) + ".jpg";
+            // 图片存储
+            FileUtils.fileWrite(bytes,MyPropertyPlaceholderConfigurer.getPropertiesMap().get(MyProperties.DC_PICTURE_PATH) + picName);
+            reqMap.put("pictureName", picName);
+            LOG.info("PIC SIZE :{}", bytes.length);
+            map.remove(getKey(ctx,2));
+        }
+        HttpClientUtils.sendHttpRequest(MyPropertyPlaceholderConfigurer.getPropertiesMap().get(MyProperties.DC_HTTP_REQUEST_URL), reqMap);
         map.remove(getKey(ctx,1));
-        map.remove(getKey(ctx,2));
+
         // 关闭流
 
     }
@@ -132,7 +138,7 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         ctx.close();
-        LOG.info("error：\r\n" + cause.getMessage());
+        LOG.error(cause.getMessage(),cause);
     }
 
     private String getKey(ChannelHandlerContext ctx, int keyType){
