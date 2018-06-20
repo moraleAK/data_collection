@@ -110,35 +110,22 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
             }else {
                ((ByteArrayOutputStream)map.get(getKey(ctx, 2))).write(con);
             }
-
         }
-
-        // 转发请求到本机 http 接口进行处理
-//        HttpClientUtils.sendHttpRequest(
-//                MyPropertyPlaceholderConfigurer.getPropertiesMap().get(MyProperties.DC_HTTP_REQUEST_URL), rev
-//        );
-
     }
 
     /**
      * 功能：读取完毕客户端发送过来的数据之后的操作
      */
     @Override
-    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+    public void channelReadComplete(ChannelHandlerContext ctx) {
         LOG.info("data receive end !");
-        // 第一种方法：写一个空的buf，并刷新写出区域。完成后关闭sock channel连接。
-//        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
-        // ctx.flush();
-        // ctx.flush(); //
-        // 第二种方法：在client端关闭channel连接，这样的话，会触发两次channelReadComplete方法。
-        // ctx.flush().close().sync(); // 第三种：改成这种写法也可以，但是这中写法，没有第一种方法的好。
     }
 
     /**
      * 功能：服务端发生异常的操作
      */
     @Override
-    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         ctx.close();
         LOG.error(cause.getMessage(),cause);
     }
