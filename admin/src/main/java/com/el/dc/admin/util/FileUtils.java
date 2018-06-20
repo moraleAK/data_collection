@@ -38,10 +38,10 @@ public class FileUtils {
     public static byte[] fileRead(String filePath) throws IOException {
         InputStream in = new FileInputStream(new File(filePath));
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-
+        byte[] bytes = new byte[1024 * 1024];
         int i = -1;
-        while ((i = in.read()) != -1) {
-            byteArrayOutputStream.write(i);
+        while ((i = in.read(bytes,0,1024* 1024 )) != -1) {
+            byteArrayOutputStream.write(bytes, 0 ,bytes.length);
         }
 
         return byteArrayOutputStream.toByteArray();

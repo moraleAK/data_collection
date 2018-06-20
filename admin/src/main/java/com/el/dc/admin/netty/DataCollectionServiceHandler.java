@@ -48,9 +48,14 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         LOG.info(" {}通道不活跃！", ctx.channel().localAddress().toString());
         LOG.info("data info :{}",map.get(getKey(ctx, 1)));
-        HashMap<String, String> reqMap = new ObjectMapper().readValue((String) map.get(getKey(ctx,1)), HashMap.class);
+        HashMap<String, Object> reqMap = new ObjectMapper().readValue((String) map.get(getKey(ctx,1)), HashMap.class);
         if(map.get(getKey(ctx,2)) != null){
+            long len = Long.valueOf((Integer)reqMap.get("IPC_Len"));
             byte[] bytes = ((ByteArrayOutputStream)map.get(getKey(ctx,2))).toByteArray();
+            if(bytes.length != len){
+                LOG.info("图片信息不完整，舍弃！");
+                return;
+            }
             String picName = MD5Utils.md5(bytes) + ".jpg";
             // 图片存储
             FileUtils.fileWrite(bytes,MyPropertyPlaceholderConfigurer.getPropertiesMap().get(MyProperties.DC_PICTURE_PATH) + picName);
@@ -60,9 +65,6 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
         }
         HttpClientUtils.sendHttpRequest(MyPropertyPlaceholderConfigurer.getPropertiesMap().get(MyProperties.DC_HTTP_REQUEST_URL), reqMap);
         map.remove(getKey(ctx,1));
-
-        // 关闭流
-
     }
 
     /**
