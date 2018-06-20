@@ -9,15 +9,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import javassist.bytecode.ByteArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
-import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-import java.util.Map;
 
 public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
     private Logger LOG = LoggerFactory.getLogger(this.getClass());
@@ -86,6 +83,10 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
 
     /**
      * 功能：读取服务器发送过来的信息
+     * 若有图片传输则此方法至少触发两次
+     * 第一次：接受数据信息
+     * 之后次数：接受图片信息
+     * 当客户端主动断开连接时触发 channelActive()
      */
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
@@ -102,8 +103,6 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
             byte[] con = new byte[buf.readableBytes()];
             buf.readBytes(con);
             if(map.get(getKey(ctx, 2)) == null){
-//                HashMap map = new ObjectMapper().readValue(getKey(ctx, 1).toString(),HashMap.class);
-//                int len = (Integer) map.get("IPC_Len");
                 ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                 outputStream.write(con);
                 map.put(getKey(ctx, 2),outputStream);
@@ -136,9 +135,5 @@ public class DataCollectionServiceHandler extends ChannelInboundHandlerAdapter {
         }else {
             return ctx.channel().id().toString() + PIC;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println();
     }
 }
